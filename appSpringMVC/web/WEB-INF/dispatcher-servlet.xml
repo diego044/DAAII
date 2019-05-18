@@ -20,6 +20,7 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">Controlador</prop>
+                <prop key="agregar.htm">Controlador</prop>
              </props>
         </property>
     </bean>

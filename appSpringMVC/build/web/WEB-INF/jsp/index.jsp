@@ -14,7 +14,7 @@
         <div class="container mt-4">
             <div class="card border-info">
                 <div class="card-header bg-info text-white">
-                    <a class="btn btn-light" href="#">Nuevo Registro</a>
+                    <a class="btn btn-light" href="agregar.htm">Nuevo Registro</a>
                 </div>
             </div>
             <div class="card-body">
