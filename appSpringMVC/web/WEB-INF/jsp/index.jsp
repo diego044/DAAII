@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -12,13 +13,38 @@
     <body>
         <div class="container mt-4">
             <div class="card border-info">
-                <div>
-                    <a>Nuevo Registro</a>
+                <div class="card-header bg-info text-white">
+                    <a class="btn btn-light" href="#">Nuevo Registro</a>
                 </div>
             </div>
-            
-        </div>
-        
-        
+            <div class="card-body">
+                <table clas="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Direccion</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <c:forEach var="registro" items="${Lista}">
+                        <tr>
+                            <td> ${registro.id} </td>
+                            <td> ${registro.nombre} ${registro.apellido}</td>
+                            <td> ${registro.correo}</td>
+                            <td> ${registro.direccion} </td>
+                            <td>
+                                <a class="btn btn-warning" href="#">Edittar</a>
+                                <a class="btn btn-danger" href="#">Eliminar</a>
+                            </td>
+                        </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+            </div>
+        </div>    
     </body>
 </html>
