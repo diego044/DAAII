@@ -1,4 +1,6 @@
+
 package Entidad;
+
 
 public class Persona {
     int id;
@@ -6,10 +8,12 @@ public class Persona {
     String apellido;
     String correo;
     String direccion;
-
-    public Persona() {
+    
+    //Constructor vacio:
+    public Persona(){
     }
 
+    //Constructor con parámetros:
     public Persona(int id, String nombre, String apellido, String correo, String direccion) {
         this.id = id;
         this.nombre = nombre;
@@ -25,7 +29,7 @@ public class Persona {
     public void setId(int id) {
         this.id = id;
     }
-    
+
     public String getNombre() {
         return nombre;
     }
@@ -33,7 +37,7 @@ public class Persona {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
     public String getApellido() {
         return apellido;
     }
@@ -57,5 +61,6 @@ public class Persona {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+    
     
 }

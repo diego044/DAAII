@@ -24,8 +24,11 @@ public class Controlador {
         mav.setViewName("index");
         return mav;
         
+        
     }
     
+
+    //Muestra el registro recien agregado en el index
     @RequestMapping(value="agregar.htm", method=RequestMethod.GET)
     public ModelAndView Agregar(){
         mav.addObject(new Persona());
@@ -33,8 +36,7 @@ public class Controlador {
         return mav;
         
     }
-    
-    
+    //Agregar nuevo registro y te manda al index
     @RequestMapping(value="agregar.htm", method=RequestMethod.POST)
     public ModelAndView Agregar(Persona p){
         String sql="insert into persona(id,nombre,apellido,correo,direccion)values(null,?,?,?,?)";
@@ -42,6 +44,7 @@ public class Controlador {
         
         return new ModelAndView("redirect:/index.htm");
         
-        
     }
+    
+    
 }

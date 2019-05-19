@@ -1,5 +1,6 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!-- EXPRESSION LANGUAGE: -->
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -17,34 +18,38 @@
                     <a class="btn btn-light" href="agregar.htm">Nuevo Registro</a>
                 </div>
             </div>
+            
             <div class="card-body">
-                <table clas="table table-hover">
+                <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>id</th>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Correo</th>
-                            <th>Direccion</th>
+                            <th>Dirección</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     
                     <tbody>
+                        <!-- JSTL:-->
                         <c:forEach var="registro" items="${Lista}">
-                        <tr>
-                            <td> ${registro.id} </td>
-                            <td> ${registro.nombre} ${registro.apellido}</td>
-                            <td> ${registro.correo}</td>
-                            <td> ${registro.direccion} </td>
-                            <td>
-                                <a class="btn btn-warning" href="#">Edittar</a>
-                                <a class="btn btn-danger" href="#">Eliminar</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td> ${registro.id}   </td>
+                                <td> ${registro.nombre} ${registro.apellido}  </td>
+                                <td> ${registro.correo}  </td>
+                                <td> ${registro.direccion}   </td>
+                                <td>
+                                    <a class="btn btn-warning" href="#"> Editar</a>
+                                    <a class="btn btn-danger" href="#"> Eliminar</a>
+                                </td>
+                            </tr>
                         </c:forEach>
                     </tbody>
                 </table>
             </div>
-        </div>    
+        </div>
+        
+        
     </body>
 </html>
