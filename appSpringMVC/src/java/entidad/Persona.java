@@ -1,6 +1,4 @@
-
 package Entidad;
-
 
 public class Persona {
     int id;

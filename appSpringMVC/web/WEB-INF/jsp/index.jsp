@@ -40,8 +40,8 @@
                                 <td> ${registro.correo}  </td>
                                 <td> ${registro.direccion}   </td>
                                 <td>
-                                    <a class="btn btn-warning" href="#"> Editar</a>
-                                    <a class="btn btn-danger" href="#"> Eliminar</a>
+                                    <a href="editar.htm?id=${registro.id}" class="btn btn-warning"> Editar</a>
+                                    <a href="delete.htm?id=${registro.id}" class="btn btn-danger"> Eliminar</a>
                                 </td>
                             </tr>
                         </c:forEach>
